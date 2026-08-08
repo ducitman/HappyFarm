@@ -1,1 +1,1 @@
-Game data will be extracted into JSON files in a later phase.
+Game data directory reserved for future JSON data-driven migration.
