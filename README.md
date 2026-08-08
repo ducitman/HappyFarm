@@ -1,41 +1,22 @@
-# HAPPYFARM
+# HappyFarm
 
-Project Vite được tái cấu trúc từ file HTML game nguồn `Nông Trại Khai Mở & Tình Yêu`.
+## Cấu trúc quan trọng
 
-## Cấu trúc
-
-```text
-HAPPYFARM/
-├─ dist/
-├─ node_modules/
-├─ public/
-│  ├─ original-game.html
-│  └─ README.md
-├─ src/
-│  ├─ css/
-│  │  └─ main.css
-│  └─ js/
-│     ├─ systems/
-│     │  └─ README.md
-│     ├─ main_backup.js
-│     └─ main.js
-├─ .gitignore
-├─ index.html
-├─ package.json
-├─ README.md
-└─ vite.config.js
+```
+public/
+  css/main.css      ← CSS runtime (Vite copy vào dist)
+  js/main.js        ← Game JS runtime
+  js/main_backup.js
+  data/original-game.html
+src/
+  css/main.css
+  js/main.js
+  js/systems/
 ```
 
-## Chạy trong VS Code
+Vite phục vụ file trong `public/` tại URL gốc: `/css/...`, `/js/...`.
 
-1. Mở thư mục `HAPPYFARM`.
-2. Mở Terminal.
-3. Chạy `npm install`.
-4. Chạy `npm run dev`.
-5. Mở URL Vite hiển thị trong terminal.
+## Render
 
-`main.js` đang dùng script classic (không phải ES module) vì HTML game nguồn gọi nhiều hàm qua inline `onclick`.
-
-## Ghi chú dữ liệu
-
-Logic, state, quests, recipes, NPC, shop và các hệ thống gameplay được giữ nguyên từ file HTML nguồn; `main_backup.js` là bản sao dự phòng của `main.js`.
+- Build: `npm install && npm run build`
+- Start: `npm start`

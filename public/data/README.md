@@ -1,1 +1,3 @@
-Game data directory reserved for future JSON data-driven migration.
+# data
+
+Thư mục dữ liệu tĩnh / bản gốc game.
