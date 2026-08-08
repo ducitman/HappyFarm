@@ -1,26 +1,41 @@
-# Nông Trại Khai Mở & Tình Yêu — Phase 1 Updated
+# HAPPYFARM
 
-Source of game logic: `nong-trai-tinh-yeu (3).html`. The HTML, CSS and JavaScript are separated for Vite/Render deployment without changing the game functions from the supplied HTML.
+Project Vite được tái cấu trúc từ file HTML game nguồn `Nông Trại Khai Mở & Tình Yêu`.
 
-## Local
+## Cấu trúc
 
-```bash
-npm install
-npm run dev
+```text
+HAPPYFARM/
+├─ dist/
+├─ node_modules/
+├─ public/
+│  ├─ original-game.html
+│  └─ README.md
+├─ src/
+│  ├─ css/
+│  │  └─ main.css
+│  └─ js/
+│     ├─ systems/
+│     │  └─ README.md
+│     ├─ main_backup.js
+│     └─ main.js
+├─ .gitignore
+├─ index.html
+├─ package.json
+├─ README.md
+└─ vite.config.js
 ```
 
-## Build
+## Chạy trong VS Code
 
-```bash
-npm run build
-```
+1. Mở thư mục `HAPPYFARM`.
+2. Mở Terminal.
+3. Chạy `npm install`.
+4. Chạy `npm run dev`.
+5. Mở URL Vite hiển thị trong terminal.
 
-## Render Web Service
+`main.js` đang dùng script classic (không phải ES module) vì HTML game nguồn gọi nhiều hàm qua inline `onclick`.
 
-Build Command: `npm install && npm run build`
+## Ghi chú dữ liệu
 
-Start Command: `npm start`
-
-The Vite preview server listens on `0.0.0.0` and uses Render's `PORT`; `happyfarm.onrender.com` is allowed by `preview.allowedHosts`.
-
-For a pure static deployment, use Render Static Site with Publish Directory `dist` and no Start Command.
+Logic, state, quests, recipes, NPC, shop và các hệ thống gameplay được giữ nguyên từ file HTML nguồn; `main_backup.js` là bản sao dự phòng của `main.js`.

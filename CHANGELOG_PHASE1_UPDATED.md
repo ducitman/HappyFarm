@@ -1,13 +1,10 @@
-# Phase 1 Updated — based on nong-trai-tinh-yeu (3).html
+# Phase 1 — HappyFarm project restructure
 
-- Replaced the old extracted game logic with the complete `<script>` block from the newly supplied HTML.
-- Replaced the old CSS with the complete `<style>` block from the newly supplied HTML.
-- Rebuilt `index.html` from the newly supplied HTML markup and externalized CSS/JS.
-- Kept the game JavaScript as a classic script so the existing inline `onclick="..."` handlers continue to resolve global functions.
-- Added `vite.config.js` for Render Web Service:
-  - `host: 0.0.0.0`
-  - `port: process.env.PORT || 4173`
-  - `preview.allowedHosts` uses `RENDER_EXTERNAL_HOSTNAME` or `happyfarm.onrender.com`
-- Updated `npm start` to use Vite preview.
-- Verified JavaScript syntax with `node --check`.
-- Verified all function names referenced by HTML `onclick` handlers exist in the new JavaScript.
+- Tách CSS inline từ HTML nguồn sang `src/css/main.css`.
+- Tách JavaScript inline sang `src/js/main.js`.
+- Tạo `src/js/main_backup.js` để giữ bản sao logic game.
+- Giữ nguyên HTML UI/game screens trong `index.html`.
+- Giữ bản HTML nguồn tại `public/original-game.html` để đối chiếu.
+- Thêm cấu trúc `src/js/systems/` để sẵn sàng tách hệ thống game thành module ở phase tiếp theo.
+- Thêm cấu hình Vite và scripts `dev`, `build`, `preview`.
+- Không chuyển JavaScript sang ES module để các hàm được gọi từ `onclick` trong HTML vẫn hoạt động.

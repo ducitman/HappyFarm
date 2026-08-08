@@ -1,15 +1,14 @@
 {
-  "name": "nong-trai-khai-mo",
-  "version": "0.2.0",
+  "name": "happyfarm",
   "private": true,
-  "type": "module",
+  "version": "0.1.0",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --host 0.0.0.0",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "latest"
+    "vite": "^7.1.2"
   }
 }
